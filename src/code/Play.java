@@ -14,8 +14,8 @@ public class Play extends JPanel{
     public boolean over = false;
     private int score=0;
     private int t = 0;
-    public ImageIcon bg1 = new ImageIcon(this.getClass().getResource("../image/bg.png"));
-    public ImageIcon bgover = new ImageIcon(this.getClass().getResource("../image/red.png"));
+    public ImageIcon bg1 = new ImageIcon(this.getClass().getResource("/image/bg.png"));
+    public ImageIcon bgover = new ImageIcon(this.getClass().getResource("/image/red.png"));
 
     Shooter me = new Shooter();
 

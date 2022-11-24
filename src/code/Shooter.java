@@ -9,7 +9,7 @@ public class Shooter {
     int w = 100;
     int h = 141;
 
-    public ImageIcon shooter = new ImageIcon(this.getClass().getResource("../image/up.png"));
+    public ImageIcon shooter = new ImageIcon(this.getClass().getResource("/image/up.png"));
     Shooter(){
     }
     public Rectangle2D getbound(){

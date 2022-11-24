@@ -15,10 +15,10 @@ public class Zombie {
     int h = 113;
 
     Zombie(){
-        String imageLocation = "../image/zombie.png";
+        String imageLocation = "/image/zombie.png";
         URL imageURL = this.getClass().getResource(imageLocation);
         img = Toolkit.getDefaultToolkit().getImage(imageURL);
-        String image = "../image/dead.png";
+        String image = "/image/dead.png";
         URL imageUR = this.getClass().getResource(image);
         zd = Toolkit.getDefaultToolkit().getImage(imageUR);
         rdZom.start();
@@ -26,7 +26,7 @@ public class Zombie {
     Zombie(int x,int y){
         this.x=x;
         this.y=y;
-        String image = "../image/dead.png";
+        String image = "/image/dead.png";
         URL imageUR = this.getClass().getResource(image);
         zd = Toolkit.getDefaultToolkit().getImage(imageUR);
     }

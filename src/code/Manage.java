@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 public class Manage extends JFrame implements ActionListener {
     Home home = new Home();
+    Play p = new Play();
 
     public Manage() {
         this.setSize(1000,813);
@@ -19,7 +20,6 @@ public class Manage extends JFrame implements ActionListener {
             this.setLocationRelativeTo(null);
             this.remove(home);
             this.setSize(1000, 813);
-            Play p = new Play();
             this.add(p);
             p.requestFocusInWindow();
             repaint();

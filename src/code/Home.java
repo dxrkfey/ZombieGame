@@ -7,8 +7,8 @@ import javax.swing.JPanel;
 
 
 public class Home extends JPanel{
-    private ImageIcon homebg = new ImageIcon(this.getClass().getResource("../image/home.jpg"));
-    private ImageIcon bts = new ImageIcon(this.getClass().getResource("../image/start.png"));
+    private ImageIcon homebg = new ImageIcon(this.getClass().getResource("/image/home.jpg"));
+    private ImageIcon bts = new ImageIcon(this.getClass().getResource("/image/start.png"));
     public JButton start = new JButton(bts);
     Home(){
         setLayout(null);
