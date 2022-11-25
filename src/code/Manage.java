@@ -8,7 +8,7 @@ public class Manage extends JFrame implements ActionListener {
     Home home = new Home();
     Play p = new Play();
 
-    public Manage() {
+    Manage() {
         this.setSize(1000,813);
         this.add(home);
         home.start.addActionListener(this);

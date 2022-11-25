@@ -3,7 +3,6 @@ package code;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.ActionListener;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
@@ -55,7 +54,7 @@ public class Play extends JPanel{
             g.drawImage(me.shooter.getImage(), me.x, me.y, me.w, me.h, this);
             g.setColor(Color.BLACK);
             g.setFont(new Font("TH Chakra Petch", Font.CENTER_BASELINE, 50));
-            g.drawString("SCORE : " + score, 50, 50);
+            g.drawString("Killed : " + score, 50, 50);
             g.drawString("Time : " + t, 800, 50);
 
             for(int i=delay;i>0;i--){
@@ -87,7 +86,7 @@ public class Play extends JPanel{
                         dead.add(new Zombie(zom.get(j).getX(), zom.get(j).getY()));
                         zom.remove(j);
                         bull.remove(i);
-                        score += 10;
+                        score ++;
                     }
                 }
             }
@@ -95,7 +94,6 @@ public class Play extends JPanel{
             for (int j = 0; j < zom.size(); j++) {
                 if (Intersect(me.getbound(), zom.get(j).getbound())|zom.get(j).getY()>700) {
                     over = true;
-                    System.out.println(over);
                 }
             }
         }
@@ -103,9 +101,10 @@ public class Play extends JPanel{
             this.setLayout(null);
             g.drawImage(bgover.getImage(), 0, 0, 1000, 813, this);
             g.setColor(Color.WHITE);
-            g.setFont(new Font("TH Chakra Petch", Font.CENTER_BASELINE, 80));
-            g.drawString("Game Over",340,300);
-            g.drawString("Score "+score,360,400);
+            g.setFont(new Font("TH Chakra Petch", Font.CENTER_BASELINE, 70));
+            g.drawString("Game Over",350,300);
+            g.drawString("You Survived For "+t+" seconds",155,400);
+            g.drawString("You Killed "+score+" Zombies",260,500);
         }
        }
 
@@ -156,7 +155,12 @@ public class Play extends JPanel{
             while (true) {
                 try {
                     if(delay<1){
-                        t++;
+                        if(over){
+                            t=t;
+                        }
+                        else{
+                            t++;
+                        }
                     }
                     Thread.sleep(1000);
                 } catch (Exception e) {
