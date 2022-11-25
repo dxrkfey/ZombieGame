@@ -93,7 +93,7 @@ public class Play extends JPanel{
             }
 
             for (int j = 0; j < zom.size(); j++) {
-                if (Intersect(me.getbound(), zom.get(j).getbound())|zom.get(j).getY()>850) {
+                if (Intersect(me.getbound(), zom.get(j).getbound())|zom.get(j).getY()>700) {
                     over = true;
                     System.out.println(over);
                 }
