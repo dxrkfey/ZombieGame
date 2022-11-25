@@ -23,6 +23,7 @@ public class Manage extends JFrame implements ActionListener {
             this.add(p);
             p.requestFocusInWindow();
             repaint();
+            p.sttt=true;
         }
     }
 

@@ -35,7 +35,7 @@ public class Zombie {
         public void run() {
             while (true) {
                 y += 5;
-                if (y >= 1000) {
+                if (y > 800) {
                     img = null;
                     rdZom = null;
                     x = (int) ((Math.random() * 200)+400);;
