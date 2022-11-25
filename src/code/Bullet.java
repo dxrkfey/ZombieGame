@@ -9,7 +9,6 @@ public class Bullet {
     int y;
     int w = 10;
     int h = 30;
-    public int count=0;
     Bullet(int x,int y){
         this.x = x;
         this.y = y;

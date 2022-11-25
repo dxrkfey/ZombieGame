@@ -38,13 +38,13 @@ public class Play extends JPanel{
                    Shoot.start();
                }
                repaint();
-               actor.start();
             }
         });
         delayTime.start();
         time.start();
         newX.start();
         addZom.start();
+        actor.start();
     }
 
     public void paintComponent(Graphics g) {
