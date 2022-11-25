@@ -124,10 +124,10 @@ public class Play extends JPanel{
         public void run() {
             while (true) {
                 try {
-                    if(me.x>=1100){
-                        me.x=-30;
-                    }else if (me.x < -30){
-                        me.x = 1050;
+                    if(me.x>1005){
+                        me.x=-5;
+                    }else if (me.x < -9){
+                        me.x = 1001;
                     }
                     repaint();
                     Thread.sleep(10);
